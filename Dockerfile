@@ -1,4 +1,4 @@
-FROM python:3.9-alpine
+FROM python:3.12-alpine
 
 ARG LIBRESPOT_VERSION=0.4.2-r4
 ARG SNAPCAST_VERSION=0.27.0-r4
