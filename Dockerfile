@@ -1,14 +1,10 @@
 FROM python:3.12-alpine
 
-ARG LIBRESPOT_VERSION=0.4.2-r4
+# renovate: datasource=github-releases depName=abadaix/snapcast
 ARG SNAPCAST_VERSION=0.27.0-r4
-
-# Add testing libraries: source of the librespot binary
-RUN echo "https://dl-cdn.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories
 
 RUN apk add --no-cache \
     bash \
-    librespot=${LIBRESPOT_VERSION} \
     snapcast=${SNAPCAST_VERSION} \
     wget \
     sed \
