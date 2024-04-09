@@ -1,7 +1,7 @@
 FROM python:3.12-alpine
 
 # renovate: datasource=github-releases depName=badaix/snapcast
-ARG SNAPCAST_VERSION=0.27.0-r4
+ARG SNAPCAST_VERSION=v0.27.0
 
 RUN apk add --no-cache \
     bash \
