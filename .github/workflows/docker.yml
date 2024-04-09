@@ -28,7 +28,7 @@ jobs:
         id: release_meta
         uses: docker/metadata-action@v5
         with:
-          images: bitteeinbit/snapserver
+          images: ${{ secrets.DOCKERHUB_IMAGENAME }}
           tags: |
             latest
             type=semver,pattern={{version}}
@@ -39,7 +39,7 @@ jobs:
         id: edge_meta
         uses: docker/metadata-action@v5
         with:
-          images: bitteeinbit/snapserver
+          images: ${{ secrets.DOCKERHUB_IMAGENAME }}
           tags: ${{ steps.extract_branch.outputs.branch }}
 
       - name: Login to DockerHub
