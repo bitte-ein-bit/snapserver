@@ -1,11 +1,11 @@
 FROM python:3.12-alpine
 
-# renovate: datasource=github-releases depName=badaix/snapcast
-ARG SNAPCAST_VERSION=v0.27.0
+# renovate: datasource=repology depName=alpine_3_12/snapcast versioning=loose
+ARG SNAPCAST_VERSION=0.27.0-r4
 
 RUN apk add --no-cache \
     bash \
-    snapcast=${SNAPCAST_VERSION} \
+    snapcast-server=${SNAPCAST_VERSION} \
     wget \
     sed \
     # Python dependencies
