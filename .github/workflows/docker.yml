@@ -26,7 +26,7 @@ jobs:
       - name: Generating release tags and labels
         if: github.event_name == 'release'
         id: release_meta
-        uses: docker/metadata-action@v4
+        uses: docker/metadata-action@v5
         with:
           images: bitteeinbit/snapserver
           tags: |
@@ -37,7 +37,7 @@ jobs:
       - name: Generating edge branch labels
         if: github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/master'
         id: edge_meta
-        uses: docker/metadata-action@v4
+        uses: docker/metadata-action@v5
         with:
           images: bitteeinbit/snapserver
           tags: ${{ steps.extract_branch.outputs.branch }}
