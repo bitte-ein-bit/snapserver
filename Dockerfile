@@ -1,6 +1,6 @@
 FROM python:3.12-alpine
 
-# renovate: datasource=repology depName=alpine_3_12/snapcast versioning=loose
+# renovate: datasource=repology depName=alpine_3_19/snapcast versioning=loose
 ARG SNAPCAST_VERSION=0.27.0-r4
 
 RUN apk add --no-cache \
