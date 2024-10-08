@@ -1,4 +1,4 @@
-FROM python:3.12-alpine3.19
+FROM python:3.13-alpine3.19
 
 # renovate: datasource=repology depName=alpine_3_20/snapcast versioning=loose
 ARG SNAPCAST_VERSION=0.28.0-r1
